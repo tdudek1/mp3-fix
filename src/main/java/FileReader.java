@@ -10,9 +10,9 @@ import java.util.Collection;
  */
 public class FileReader {
 
- public Collection<File> GetFiles(String path){
+    public Collection<File> GetFiles(String path) {
 
-     return FileUtils.listFiles(new File(path),new String[] { "mp3"},true);
+        return FileUtils.listFiles(new File(path), new String[]{"mp3"}, true);
 
- }
+    }
 }
