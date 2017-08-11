@@ -50,11 +50,19 @@ public class Mp3FileData {
         Id3Genere = id3Genere;
     }
 
+    public Boolean getMismatch() {
+        return mismatch;
+    }
+
+    public void setMismatch(Boolean mismatch) {
+        this.mismatch = mismatch;
+    }
+
     private String FileArtist;
     private String FileTitle;
     private String FileGenere;
-
     private String Id3Artist;
     private String Id3Title;
     private String Id3Genere;
+    private Boolean mismatch;
 }

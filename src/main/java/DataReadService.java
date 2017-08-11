@@ -40,12 +40,24 @@ public class DataReadService {
         return result;
     }
 
-    private Mp3FileData ReadFromFile(File file) {
+    public Mp3FileData ReadFromFile(File file) {
+        Mp3FileData result = new Mp3FileData();
         StringUtils utils = new StringUtils();
 
         String fileName = FilenameUtils.removeExtension(file.getName());
 
-        return null;
+        String[] values = utils.split(fileName," - ");
+        if(values.length == 2)
+        {
+            result.setFileArtist(utils.trim(values[0]));
+            result.setFileTitle(utils.trim(values[1]));
+        }
+        else
+        {
+            result.setMismatch(true);
+        }
+
+        return result;
     }
 
 }
